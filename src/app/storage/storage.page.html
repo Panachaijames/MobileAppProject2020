@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start">
+      <ion-back-button ></ion-back-button> 
+     </ion-button>
+    <ion-title>storage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-radio-group [(ngModel)]="myStatus">
+      <ion-list-header>
+        <ion-label>
+          Are you from these Countries?
+        </ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Ireland</ion-label>
+        <ion-radio value="Ireland"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>USA</ion-label>
+        <ion-radio value="America"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>UK</ion-label>
+        <ion-radio value="England"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Thailand</ion-label>
+        <ion-radio value="Thailand"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>China</ion-label>
+        <ion-radio value="China"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Not in the choice</ion-label>
+        <ion-radio value="Not in the choice"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <ion-button (click)="ionViewWillLeave()">Save the Answer!</ion-button>
+</ion-content>

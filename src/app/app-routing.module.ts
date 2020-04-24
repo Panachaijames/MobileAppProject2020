@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'page2',
+    loadChildren: () => import('./page2/page2.module').then( m => m.Page2PageModule)
+  },
+  {
+    path: 'storage',
+    loadChildren: () => import('./storage/storage.module').then( m => m.StoragePageModule)
+  },
+  {
+    path: 'plugin',
+    loadChildren: () => import('./plugin/plugin.module').then( m => m.PluginPageModule)
+  },
 ];
 
 @NgModule({

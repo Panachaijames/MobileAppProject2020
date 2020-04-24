@@ -25,3 +25,34 @@
 #container a {
   text-decoration: none;
 }
+
+ion-title {
+  font-size: 40px;
+}
+
+b{
+  font-size: 45px;
+}
+
+li{
+  text-align: center;
+  color: whitesmoke;
+}
+h1{
+  text-align: center;
+}
+ion-title{
+  text-align: center;
+  color: whitesmoke;
+}
+ion-button{
+  text-align: center;
+}
+ion-content {
+  --background: url("../blur.jpg") 0 0/100% 100% no-repeat;
+}
+ion-toolbar {
+  --background: url("../blur2.jpg") 0 0/100% 100% no-repeat;
+}
+
+

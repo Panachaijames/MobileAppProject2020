@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start">
+     <ion-back-button ></ion-back-button> 
+    </ion-button>
+    
+    <ion-title>Countries</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item-divider>
+  <ion-input placeholder="Search for your country!" [(ngModel)]="searchCountry">
+  </ion-input>
+  <ion-button (click)="performSearch()">Search</ion-button>
+</ion-item-divider>
+
+<ion-list *ngFor="let search of CovidSearchData">
+  <ion-list-header>
+    <ion-label>{{search.Country}}</ion-label>
+  </ion-list-header>
+  <ion-item>
+     <ion-label>Confirmed:{{search.Confirmed}}</ion-label>
+     <ion-label>Deaths:{{search.Deaths}}</ion-label>
+     <ion-label>Recovered:{{search.Recovered}}</ion-label>
+     <ion-label>Date:{{search.Date}}</ion-label>
+  </ion-item>
+</ion-list>
+  <ion-list *ngFor="let covid of CovidData">
+    <ion-list-header>
+      <ion-label>{{covid.Country}}</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>NewConfirmed:{{covid.NewConfirmed}}</ion-label>
+      <ion-label>TotalConfirmed:{{covid.TotalConfirmed}}</ion-label>
+      <ion-label>NewDeaths:{{covid.NewDeaths}}</ion-label>
+      <ion-label>TotalDeaths:{{covid.TotalDeaths}}</ion-label>
+      <ion-label>TotalRecovered:{{covid.TotalRecovered}}</ion-label>
+      <ion-label>Date:{{covid.Date}}</ion-label>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

@@ -1,20 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+     <h1> COVID-19 News</h1>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <h1><b>Number of COVID-19 Cases LIVE!</b></h1>
+<ul>
+  <li>
+  <h1>New Cases Confirmed : {{covidWorld.NewConfirmed}}</h1>
+ <h1> Total Cases Confirmed : {{covidWorld.TotalConfirmed}}</h1>
+ <h1> New Cases Deaths : {{covidWorld.NewDeaths}}</h1>
+ <h1> Total amount of Deaths : {{covidWorld.TotalDeaths}}</h1>
+  <h1>New Cases Recovered : {{covidWorld.NewRecovered}}</h1>
+ <h1>Total Cases Recovered : {{covidWorld.TotalRecovered}} </h1>
+  </li>
+</ul>
+<br>
+<ion-title>
+Press to find country name from latitude & longtitude and vice versa</ion-title>
+<h1>
+  <ion-button [routerLink] = "['/plugin']" (click)=" presentLoadingWithOptions()">Go to plug-in page!</ion-button>
+</h1>
+  <br>
+  <ion-title>Your Country is: {{myCountry}}</ion-title>
+  <br>
+  <ion-title>Press The Button to do the survey!(Or update the answer!)</ion-title>
+  <h1>
+<ion-button [routerLink]="['/storage']" (click)=" presentLoadingWithOptions()">Go to do the Survey</ion-button>
+</h1>
+<br><br>
+<ion-title>Press the button for the status of each countries around the world</ion-title>
+<h1>
+  <ion-button [routerLink] = "['/page2']" (click)=" presentLoadingWithOptions()">Go to countries page</ion-button>
+  </h1>
 </ion-content>

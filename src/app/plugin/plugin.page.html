@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start">
+      <ion-back-button ></ion-back-button> 
+     </ion-button>
+    <ion-title>plugin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>*Flash light only work on mobile// geolocation work in both*</h1>
+  <br>
+    <ion-button (click)="locationMethod()" (click)="lightMethod()">Find Your Location!</ion-button>
+    <h1><b>{{lat}},{{long}}</b></h1>
+    <br>
+    <h1>*This point onward only work for moible*</h1>
+    <h1>Find Country From Latitude & Longtitude</h1>
+    <h1>*Will be on console.log*</h1>
+    <ion-input placeholder="Type your latitude,longtitude here!"></ion-input>
+    <ion-button (click)="countryMethod()">Press it!</ion-button>
+    <h1>I will covert country name to latitude, longtitude for you!</h1>
+    <h1>*Will be on console.log*</h1>
+    <ion-input placeholder="Type country name here!"></ion-input>
+    <ion-button (click)="searchName()">Press Here!</ion-button>
+</ion-content>
